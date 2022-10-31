@@ -11,24 +11,25 @@ import src.renameapplication.fx.PaneMain;
 import java.io.File;
 import java.util.EventListener;
 import javafx.scene.input.MouseEvent;
+import src.renameapplication.fx.TopPane;
 
 public class chooseFolder implements EventHandler<MouseEvent> {
 
     private DirectoryChooser directoryChooser;
-    private PaneMain paneMain;
+    private TopPane topPane;
 
-    public chooseFolder(PaneMain paneMain) {
+    public chooseFolder(TopPane topPane) {
         this.directoryChooser = new DirectoryChooser();
-        this.paneMain = paneMain;
+        this.topPane = topPane;
     }
 
     @Override
     public void handle(MouseEvent event) {
-        File directory = this.directoryChooser.showDialog(paneMain.getScene().getWindow());
+        File directory = this.directoryChooser.showDialog(this.topPane.getScene().getWindow());
 
         if (directory != null) {
-            this.paneMain.getLabelPath().setText("");
-            this.paneMain.getLabelPath().setText(directory.getAbsolutePath());
+            this.topPane.getLabelPath().setText("");
+            this.topPane.getLabelPath().setText(directory.getAbsolutePath());
         }
 
 
