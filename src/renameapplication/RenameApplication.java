@@ -25,9 +25,4 @@ public class RenameApplication extends Application {
         launch(args);
 
     }
-    /*try {
-        Rename.RenameMethod("C:/Users/Windows/Desktop/test", "DAL");
-    } catch (IllegalArgumentException e) {
-        System.out.println("Not a directory");
-    }*/
 }

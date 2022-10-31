@@ -3,7 +3,7 @@ package src.renameapplication.model;
 import java.io.File;
 import java.util.Objects;
 
-public abstract class Rename {
+public class Rename {
 
     public static void RenameMethod(String path, String newName) {
 
