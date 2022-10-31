@@ -14,13 +14,12 @@ public class renameController implements EventHandler<MouseEvent> {
     public renameController(PaneMain paneMain) {
         this.paneMain = paneMain;
         this.rename = new Rename();
-        TextField textField = this.paneMain.getTextFieldName();
     }
 
     @Override
     public void handle(MouseEvent event) {
         try {
-            rename.RenameMethod(this.paneMain.getLabelPath().getText(), "hrhhr");
+            rename.RenameMethod(this.paneMain.getLabelPath().getText(), this.paneMain.getTextFieldName().getText());
         } catch (IllegalArgumentException e) {
             System.out.println("Not a directory");
         }
