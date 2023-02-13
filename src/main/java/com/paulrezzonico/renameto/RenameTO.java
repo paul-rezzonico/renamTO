@@ -1,12 +1,14 @@
-package src.renameapplication;
+package com.paulrezzonico.renameto;
 
+import com.paulrezzonico.renameto.view.PaneMain;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import src.renameapplication.fx.PaneMain;
-import src.renameapplication.model.Rename;
 
-public class RenameApplication extends Application {
+import java.util.Objects;
+
+public class RenameTO extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -14,15 +16,12 @@ public class RenameApplication extends Application {
         PaneMain paneMain = new PaneMain();
         Scene scene = new Scene(paneMain, 800, 500);
         primaryStage.setTitle("Rename Files Application");
+        primaryStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/icon.png"))));
         primaryStage.setScene(scene);
         primaryStage.show();
-
-
     }
 
     public static void main(String[] args) {
-
         launch(args);
-
     }
 }

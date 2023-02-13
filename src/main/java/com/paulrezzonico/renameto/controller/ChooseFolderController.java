@@ -1,24 +1,18 @@
-package src.renameapplication.controller;
+package com.paulrezzonico.renameto.controller;
 
+import com.paulrezzonico.renameto.view.TopPane;
 import javafx.event.EventHandler;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
-import src.renameapplication.fx.PaneMain;
 
 import java.io.File;
-import java.util.EventListener;
-import javafx.scene.input.MouseEvent;
-import src.renameapplication.fx.TopPane;
 
-public class chooseFolder implements EventHandler<MouseEvent> {
+public class ChooseFolderController implements EventHandler<MouseEvent> {
 
     private DirectoryChooser directoryChooser;
     private TopPane topPane;
 
-    public chooseFolder(TopPane topPane) {
+    public ChooseFolderController(TopPane topPane) {
         this.directoryChooser = new DirectoryChooser();
         this.topPane = topPane;
     }

@@ -1,11 +1,12 @@
-package src.renameapplication.model;
+package com.paulrezzonico.renameto.model;
+
+import javafx.scene.control.Label;
 
 import java.io.File;
 import java.util.Objects;
 
-public class Rename {
-
-    public static void RenameMethod(String path, String newName) {
+public class Renamer {
+    public static void RenameMethod(String path, String newName, Label outPut, Label error) {
 
         File folder = new File(path);
         if (!folder.isDirectory()){
@@ -15,14 +16,17 @@ public class Rename {
         File[] allFiles  = folder.listFiles();
         int compt = 0;
 
+        outPut.setText("");
+        error.setText("");
+
         for(File f: Objects.requireNonNull(allFiles)) {
             compt ++;
 
             if(f.isFile()) {
                 if (f.renameTo(new File(path+"/"+newName + compt+".png"))) {
-                    System.out.println("File" + compt + "renamed successfully");
+                    outPut.setText(outPut.getText() + "File" + compt + "renamed successfully\n");
                 } else {
-                    System.out.println("File" + compt + "renaming failed");
+                    error.setText(error.getText() + "File" + compt + "renaming failed\n");
                 };
 
             }

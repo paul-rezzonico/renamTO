@@ -1,4 +1,4 @@
-package src.renameapplication.fx;
+package com.paulrezzonico.renameto.view;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -7,8 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import src.renameapplication.controller.chooseFolder;
-import src.renameapplication.controller.renameController;
 
 public class TopPane extends VBox {
 
@@ -21,14 +19,15 @@ public class TopPane extends VBox {
     private HBox hBoxInfo;
 
     public TopPane() {
-        this.labelInfo = new Label("Rentrer le chemin du dossier :");
+        this.labelInfo = new Label("Folder Path :");
         this.labelPath = new Label();
         this.labelInfo.setPrefWidth(300);
 
         this.buttonChoose = new Button("Choose folder");
-        this.buttonChoose.setOnMouseClicked(new chooseFolder(this));
+        this.buttonChoose.setPrefWidth(100);
+
         this.buttonRename = new Button("Rename");
-        this.buttonRename.setOnMouseClicked(new renameController(this));
+        this.buttonRename.setPrefWidth(100);
 
         this.textFieldName = new TextField();
         this.textFieldName.setPromptText("name for each images");
@@ -37,7 +36,7 @@ public class TopPane extends VBox {
         this.hBoxInfo.setPadding(new Insets(10, 10, 10, 10));
         this.hBoxInfo.setAlignment(Pos.CENTER);
 
-        this.hBoxButton = new HBox(50, buttonChoose, buttonRename  , textFieldName);
+        this.hBoxButton = new HBox(50, buttonChoose, textFieldName, buttonRename);
         this.hBoxButton.setPadding(new Insets(10, 10, 10, 10));
         this.hBoxButton.setAlignment(Pos.CENTER);
 
@@ -95,3 +94,4 @@ public class TopPane extends VBox {
         return hBoxButton;
     }
 }
+
