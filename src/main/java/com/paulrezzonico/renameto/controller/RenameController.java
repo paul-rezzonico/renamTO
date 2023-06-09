@@ -19,8 +19,8 @@ public class RenameController implements EventHandler<MouseEvent> {
     @Override
     public void handle(MouseEvent event) {
         try {
-            renamer.RenameMethod(this.paneMain.getTopPane().getLabelPath().getText(),
-                    this.paneMain.getTopPane().getTextFieldName().getText(),
+            renamer.rename(this.paneMain.getTopPane().getDisplayPathLabel().getText(),
+                    this.paneMain.getTopPane().getNameTextField().getText(),
                     this.paneMain.getCenterPane().getOutPut(), this.paneMain.getCenterPane().getError());
         } catch (IllegalArgumentException e) {
             NotDirectory notDirectory = new NotDirectory();

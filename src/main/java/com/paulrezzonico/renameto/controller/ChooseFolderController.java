@@ -22,8 +22,8 @@ public class ChooseFolderController implements EventHandler<MouseEvent> {
         File directory = this.directoryChooser.showDialog(this.topPane.getScene().getWindow());
 
         if (directory != null) {
-            this.topPane.getLabelPath().setText("");
-            this.topPane.getLabelPath().setText(directory.getAbsolutePath());
+            this.topPane.getDisplayPathLabel().setText("");
+            this.topPane.getDisplayPathLabel().setText(directory.getAbsolutePath());
         }
 
 

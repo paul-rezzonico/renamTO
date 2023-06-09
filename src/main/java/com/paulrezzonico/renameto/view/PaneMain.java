@@ -11,8 +11,8 @@ public class PaneMain extends BorderPane {
 
     public PaneMain() {
         this.topPane = new TopPane();
-        this.topPane.getButtonRename().setOnMouseClicked(new RenameController(this));
-        this.topPane.getButtonChoose().setOnMouseClicked(new ChooseFolderController(this.getTopPane()));
+        this.topPane.getRenameButton().setOnMouseClicked(new RenameController(this));
+        this.topPane.getChoiceButton().setOnMouseClicked(new ChooseFolderController(this.getTopPane()));
         this.setTop(this.topPane);
 
         this.centerPane = new CenterPane();

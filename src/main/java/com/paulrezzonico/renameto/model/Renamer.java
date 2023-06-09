@@ -6,7 +6,8 @@ import java.io.File;
 import java.util.Objects;
 
 public class Renamer {
-    public static void RenameMethod(String path, String newName, Label outPut, Label error) {
+
+    public static void rename(String path, String newName, Label outPut, Label error) {
 
         File folder = new File(path);
         if (!folder.isDirectory()){

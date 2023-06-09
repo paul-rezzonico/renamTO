@@ -10,84 +10,84 @@ import javafx.scene.paint.Color;
 
 public class TopPane extends VBox {
 
-    private Label labelInfo;
-    private Label labelPath;
-    private Button buttonChoose;
-    private Button buttonRename;
-    private TextField textFieldName;
-    private HBox hBoxButton;
-    private HBox hBoxInfo;
+    private Label pathLabel;
+    private Label displayPathLabel;
+    private Button choiceButton;
+    private Button renameButton;
+    private final TextField nameTextField;
+    private final HBox hBoxButton;
+    private HBox pathHbox;
 
     public TopPane() {
-        this.labelInfo = new Label("Folder Path :");
-        this.labelPath = new Label();
-        this.labelInfo.setPrefWidth(300);
+        this.pathLabel = new Label("Folder Path :");
+        this.displayPathLabel = new Label();
+        this.pathLabel.setPrefWidth(300);
 
-        this.buttonChoose = new Button("Choose folder");
-        this.buttonChoose.setPrefWidth(100);
+        this.choiceButton = new Button("Choose folder");
+        this.choiceButton.setPrefWidth(100);
 
-        this.buttonRename = new Button("Rename");
-        this.buttonRename.setPrefWidth(100);
+        this.renameButton = new Button("Rename");
+        this.renameButton.setPrefWidth(100);
 
-        this.textFieldName = new TextField();
-        this.textFieldName.setPromptText("name for each images");
+        this.nameTextField = new TextField();
+        this.nameTextField.setPromptText("name for each images");
 
-        this.hBoxInfo = new HBox(50, labelInfo, labelPath);
-        this.hBoxInfo.setPadding(new Insets(10, 10, 10, 10));
-        this.hBoxInfo.setAlignment(Pos.CENTER);
+        this.pathHbox = new HBox(50, pathLabel, displayPathLabel);
+        this.pathHbox.setPadding(new Insets(10, 10, 10, 10));
+        this.pathHbox.setAlignment(Pos.CENTER);
 
-        this.hBoxButton = new HBox(50, buttonChoose, textFieldName, buttonRename);
+        this.hBoxButton = new HBox(50, choiceButton, nameTextField, renameButton);
         this.hBoxButton.setPadding(new Insets(10, 10, 10, 10));
         this.hBoxButton.setAlignment(Pos.CENTER);
 
         this.setSpacing(50);
-        this.getChildren().addAll(this.hBoxInfo, this.hBoxButton);
+        this.getChildren().addAll(this.pathHbox, this.hBoxButton);
         this.setBackground(new Background(new BackgroundFill(Color.LIGHTGRAY, CornerRadii.EMPTY, Insets.EMPTY)));
 
     }
 
-    public Label getLabelInfo() {
-        return this.labelInfo;
+    public Label getPathLabel() {
+        return this.pathLabel;
     }
 
-    public void setLabelInfo(Label labelInfo) {
-        this.labelInfo = labelInfo;
+    public void setPathLabel(Label pathLabel) {
+        this.pathLabel = pathLabel;
     }
 
-    public Label getLabelPath() {
-        return labelPath;
+    public Label getDisplayPathLabel() {
+        return displayPathLabel;
     }
 
-    public void setLabelPath(Label labelPath) {
-        this.labelPath = labelPath;
+    public void setDisplayPathLabel(Label displayPathLabel) {
+        this.displayPathLabel = displayPathLabel;
     }
 
-    public Button getButtonChoose() {
-        return buttonChoose;
+    public Button getChoiceButton() {
+        return choiceButton;
     }
 
-    public void setButtonChoose(Button buttonChoose) {
-        this.buttonChoose = buttonChoose;
+    public void setChoiceButton(Button choiceButton) {
+        this.choiceButton = choiceButton;
     }
 
-    public HBox gethBoxInfo() {
-        return hBoxInfo;
+    public HBox getPathHbox() {
+        return pathHbox;
     }
 
-    public void sethBoxInfo(HBox hBoxInfo) {
-        this.hBoxInfo = hBoxInfo;
+    public void setPathHbox(HBox pathHbox) {
+        this.pathHbox = pathHbox;
     }
 
-    public Button getButtonRename() {
-        return buttonRename;
+    public Button getRenameButton() {
+        return renameButton;
     }
 
-    public void setButtonRename(Button buttonRename) {
-        this.buttonRename = buttonRename;
+    public void setRenameButton(Button renameButton) {
+        this.renameButton = renameButton;
     }
 
-    public TextField getTextFieldName() {
-        return this.textFieldName;
+    public TextField getNameTextField() {
+        return this.nameTextField;
     }
 
     public HBox gethBoxButton() {
