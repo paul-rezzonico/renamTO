@@ -11,4 +11,3 @@ public class NotDirectory extends Alert {
         this.setContentText("Please choose a directory first !");
     }
 }
-

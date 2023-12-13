@@ -6,8 +6,8 @@ import javafx.scene.layout.BorderPane;
 
 public class PaneMain extends BorderPane {
 
-    private TopPane topPane;
-    private CenterPane centerPane;
+    private final TopPane topPane;
+    private final CenterPane centerPane;
 
     public PaneMain() {
         this.topPane = new TopPane();
@@ -27,4 +27,3 @@ public class PaneMain extends BorderPane {
         return centerPane;
     }
 }
-

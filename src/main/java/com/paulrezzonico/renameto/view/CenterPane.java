@@ -9,8 +9,8 @@ import javafx.scene.text.Font;
 
 public class CenterPane extends HBox {
 
-    private Label outPut;
-    private Label error;
+    private final Label outPut;
+    private final Label error;
 
     public CenterPane() {
         this.outPut = new Label();
@@ -18,7 +18,7 @@ public class CenterPane extends HBox {
         this.outPut.setAlignment(Pos.CENTER);
         this.outPut.setFont(Font.font("Verdana", 10));
         this.outPut.setTextFill(Color.GREEN);
-        this.setMargin(this, new Insets(10, 10, 10, 10));
+        setMargin(this, new Insets(10, 10, 10, 10));
 
         this.error = new Label();
         this.error.setPrefWidth(400);
@@ -36,4 +36,3 @@ public class CenterPane extends HBox {
         return this.error;
     }
 }
-

@@ -8,18 +8,16 @@ import javafx.scene.input.MouseEvent;
 
 public class RenameController implements EventHandler<MouseEvent> {
 
-    private PaneMain paneMain;
-    private Renamer renamer;
+    private final PaneMain paneMain;
 
     public RenameController(PaneMain paneMain) {
         this.paneMain = paneMain;
-        this.renamer = new Renamer();
     }
 
     @Override
     public void handle(MouseEvent event) {
         try {
-            renamer.rename(this.paneMain.getTopPane().getDisplayPathLabel().getText(),
+            Renamer.rename(this.paneMain.getTopPane().getDisplayPathLabel().getText(),
                     this.paneMain.getTopPane().getNameTextField().getText(),
                     this.paneMain.getCenterPane().getOutPut(), this.paneMain.getCenterPane().getError());
         } catch (IllegalArgumentException e) {

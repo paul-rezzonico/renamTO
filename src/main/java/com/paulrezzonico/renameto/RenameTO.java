@@ -8,10 +8,10 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-public class RenameTO extends Application{
+public class RenameTO extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
         PaneMain paneMain = new PaneMain();
         Scene scene = new Scene(paneMain, 800, 500);
