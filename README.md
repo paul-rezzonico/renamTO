@@ -1,4 +1,4 @@
-# Real-Time Project
+# renamTO
 
 ## Overview
 
@@ -23,19 +23,19 @@
 
 ### Prerequisites
 
-- Java Development Kit (JDK 1.8 or higher)
-- Maven
+- Java Development Kit (JDK 1.8 or higher) ![java](https://img.shields.io/badge/java-1.8-orange)
+- Maven ![maven](https://img.shields.io/badge/maven-3.6.3-blue)
 
 ### Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/paul-rezzonico/real-time.git
+    git clone https://github.com/paul-rezzonico/renamTO.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd real-time
+    cd renamTO
     ```
 
 3. Build the project using Maven:
