@@ -5,7 +5,7 @@
 <table>
   <tr>
     <td>
-      <img src=./logo.png width=150px />
+      <img alt="logo" src=./logo.png width=150px />
     </td>
     <td>
       <p>This project is a Java application that allows to rename all file in a directory, by setting a name and a number of digits.</p>
@@ -15,7 +15,7 @@
 
 --- 
 
-<img src="https://drive.google.com/uc?export=view&id=1ftgqaegFSdgj86hUJP0pATaG34S4d-Rs" width="280" >   
+<img alt="interface" src="https://drive.google.com/uc?export=view&id=1ZLv5jb_XTJnQpJDE6EDbk5QKhZXfZ1eg" width="280" >
 
 ---
 
