@@ -23,7 +23,7 @@
 
 ### Prerequisites
 
-- Java Development Kit (JDK 1.8 or higher) ![java](https://img.shields.io/badge/java-1.8-orange)
+- Java Development Kit (JDK 18 or higher) ![java](https://img.shields.io/badge/java-1.8-orange)
 - Maven ![maven](https://img.shields.io/badge/maven-3.6.3-blue)
 
 ### Installation
