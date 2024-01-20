@@ -28,7 +28,8 @@ public class Renamer {
             compt++;
 
             if (f.isFile()) {
-                if (f.renameTo(new File(path + "/" + newName + compt + ".png"))) {
+                String extension = f.getName().substring(f.getName().lastIndexOf(".") + 1);
+                if (f.renameTo(new File(path + "/" + newName + compt + "." + extension))) {
                     outPut.setText(outPut.getText() + "File" + compt + "renamed successfully\n");
                 } else {
                     error.setText(error.getText() + "File" + compt + "renaming failed\n");
